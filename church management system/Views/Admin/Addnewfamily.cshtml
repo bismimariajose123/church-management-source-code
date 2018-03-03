@@ -1,0 +1,467 @@
+﻿@model church_management_system.Models.tbl_Reg
+
+@{
+    Layout = null;
+    List<SelectListItem> li = new List<SelectListItem>();
+    li.Add(new SelectListItem() { Text = "Male", Value = "M" });
+
+    li.Add(new SelectListItem() { Text = "Female", Value = "F" });
+
+    List<SelectListItem> wardname = new List<SelectListItem>();
+    wardname.Add(new SelectListItem() { Text = "parappa", Value = "1" });
+    wardname.Add(new SelectListItem() { Text = "neduvode", Value = "2" });
+
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Addnewfamily</title>
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/jquery")
+    @Scripts.Render("~/bundles/js")
+</head>
+<body>
+    @*validationscripts--------------------*@
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    @*//--------------*close validation scripts-----------------*@
+
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+   
+    <script type="text/javascript">
+
+        //-----------------------------image preview-------------------------------------
+        function show(input) {
+            if (input.files && input.files[0]) {
+                var filerdr = new FileReader();
+                filerdr.onload = function (e) {
+                    $('#user_img').attr('src', e.target.result);
+                }
+                filerdr.readAsDataURL(input.files[0]);
+            }
+        }
+        function check() {
+            document.getElementById("WardNumber").value = document.getElementById("Wardname").value;
+        }
+
+        $(function () {
+            $("form").submit(function () {
+                var selTypeText = $("#Wardname option:selected").text();
+                $("#hidText").val(selTypeText);
+            });
+        });
+
+    </script>
+    @*//-------------------------------ward number------------------------------------*@
+
+
+
+
+    <!-- header -->
+    <div class="header-top">
+        <div class="container">
+            <div class="bottom_header_left">
+                <p>
+                    Social media
+                </p>
+            </div>
+            <div class="bottom_header_right">
+                <div class="bottom-social-icons">
+                    <a class="facebook" href="#">
+                        <span class="fa fa-facebook"></span>
+                    </a>
+                    <a class="twitter" href="#">
+                        <span class="fa fa-twitter"></span>
+                    </a>
+                    <a class="pinterest" href="#">
+                        <span class="fa fa-pinterest-p"></span>
+                    </a>
+                    <a class="linkedin" href="#">
+                        <span class="fa fa-linkedin"></span>
+                    </a>
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="content white">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <h1>
+                                St. Joseph's Church
+                                <label>Parappa , Alakode , Kannur , 670571.</label>
+
+                            </h1>
+                        </a>
+                    </div>
+                    <!--/.navbar-header-->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <nav class="link-effect-2" id="link-effect-2">
+                            <ul class="nav navbar-nav">
+                                <li class="active">
+                                    @Html.ActionLink("Home", "Index", "Admin")
+                                    @*<a href="index.html" class="effect-3">Home</a>*@
+                                </li>
+                                @*<li>
+                                        @Html.ActionLink("About Us", "about", "Home")
+                                        @*<a href="about.html" class="effect-3">About Us</a>
+                                    </li>*@
+
+                                <li class="dropdown">
+
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Registry
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            @Html.ActionLink(" Add new family", "Addnewfamily", "Admin")
+                                            @*<a href="icons.html"></a>*@
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("List All Family", "Viewallfamily", "Admin")
+
+                                            @*<a href="codes.html">List All Family</a>*@
+                                        </li>
+                                        <li>
+                                            <a href="codes.html">Add Non Parish Member</a>
+                                        </li>
+                                        <li>
+                                            <a href="codes.html">Ward</a>
+                                        </li>
+                                        <li>
+                                            <a href="codes.html">Holy Communion</a>
+                                        </li>
+                                        <li>
+                                            <a href="codes.html">Bethrothal</a>
+                                        </li>
+                                        <li>
+                                            <a href="codes.html">Marriage</a>
+                                        </li>
+                                        <li>
+                                            <a href="codes.html">Death</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Organization
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="icons.html">Credit</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                @*<li>
+
+                                        <a href="login.html" class="effect-3">Login</a>
+                                    </li>*@
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--/.navbar-collapse-->
+                    <!--/.navbar-->
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div>
+
+    </div>
+
+    @using (Html.BeginForm("Addnewfamily", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+
+        <center><h4 style="color:darkseagreen;font:bolder 20px">Registration</h4></center>
+        <hr />
+        <div style="width:80%;margin-left:10%">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="row">
+            <div class="col-md-6">
+                <input type="hidden" id="hidText" name="hidText" />
+                @*<div class="form-group">*@
+                @Html.LabelFor(model => model.WardName, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%", })
+                @*<div class="col-md-10">*@
+                @Html.DropDownList("Wardname", wardname, "Select Ward", htmlAttributes: new { @class = "form-control", @onchange = "check()" })
+
+                @Html.ValidationMessageFor(model => model.WardName, "", new { @class = "text-danger" })
+                @*</div>
+                    </div>*@
+
+            </div>
+            <div class="col-md-6">
+
+                @*<div class="form-group">*@
+                @Html.LabelFor(model => model.WardNumber, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+                @*<div class="col-md-10">*@
+                @Html.EditorFor(model => model.WardNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.WardNumber, "", new { @class = "text-danger" })
+                @*</div>
+                    </div>*@
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.FamilyName, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+                @Html.EditorFor(model => model.FamilyName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FamilyName, "", new { @class = "text-danger" })
+            </div>
+
+
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.FamilyHead, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.FamilyHead, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FamilyHead, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.H_father_name, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.H_father_name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.H_father_name, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.H_mother_name, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.H_mother_name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.H_mother_name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.H_wife_name, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.H_wife_name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.H_wife_name, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.W_familyName, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.W_familyName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.W_familyName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.W_place, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.W_place, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.W_place, "", new { @class = "text-danger" })
+            </div>
+
+
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.W_parish, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.W_parish, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.W_parish, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.Mob_nob, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.Mob_nob, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Mob_nob, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.Landline, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.Landline, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Landline, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+                @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.Town, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.Town, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Town, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.PO, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.PO, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PO, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.Landmark, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.Landmark, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Landmark, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.Prev_Parish, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.Prev_Parish, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Prev_Parish, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.Prev_Dioceses, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.Prev_Dioceses, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Prev_Dioceses, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.Occupation, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.Occupation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Occupation, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.MonthlyIncome, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+
+                @Html.EditorFor(model => model.MonthlyIncome, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MonthlyIncome, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <br />
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2", style = "margin-right:10%" })
+                <img id="user_img" height="100" width="90" style="border:solid" />
+                <input id="file" type="file" name="file" onchange="show(this)" />
+                @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+
+        <div class="row">
+            <br />
+            <div class="col-md-10">
+                <input type="submit" value="Register" class="btn btn-default" style="width:100%;margin-left:10%;margin-top:5%;color:white;background-color:cadetblue" />
+            </div>
+        </div>
+
+
+        </div>
+
+    }
+    <br />
+    <div>
+        @Html.ActionLink("Back to HOME", "Index")
+    </div>
+    <!-- Flexslider-js for-testimonials -->
+    <script>
+        $(window).load(function () {
+            $("#flexiselDemo1").flexisel({
+                visibleItems: 1,
+                animationSpeed: 1000,
+                autoPlay: false,
+                autoPlaySpeed: 3000,
+                pauseOnHover: true,
+                enableResponsiveBreakpoints: true,
+                responsiveBreakpoints: {
+                    portrait: {
+                        changePoint: 480,
+                        visibleItems: 1
+                    },
+                    landscape: {
+                        changePoint: 640,
+                        visibleItems: 1
+                    },
+                    tablet: {
+                        changePoint: 768,
+                        visibleItems: 1
+                    }
+                }
+            });
+
+        });
+    </script>
+    <script src="js/jquery.flexisel.js"></script>
+    <!-- //Flexslider-js for-testimonials -->
+    <!-- smooth scrolling -->
+    <script src="js/SmoothScroll.min.js"></script>
+    <script src="js/move-top.js"></script>
+    <script src="js/easing.js"></script>
+    <!-- here stars scrolling icon -->
+    <script>
+        $(document).ready(function () {
+            /*
+                var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+                };
+            */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <!-- //here ends scrolling icon -->
+    <!-- smooth scrolling -->
+    <!-- //js-files -->
+
+</body>
+</html>

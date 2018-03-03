@@ -1,0 +1,59 @@
+﻿@model IEnumerable<church_management_system.Models.login_regtbl>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Resetpwd</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/jquery")
+    @Scripts.Render("~/bundles/js")
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <p style="margin-top:20px;margin-left:20px">
+        <a href="@Url.Action("Index", "Admin")" class="btn btn-info" role="button" style="background-color:crimson">HOME</a>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table sm" style="width:50%;margin-left:70px;margin-top:40px">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.username)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.password)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.username)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.password)
+                    </td>
+                    <td>
+                        <span class="btn btn-info btn-sm">
+                            @Html.ActionLink("Edit", "Editdetail", new { id = item.userId }, htmlAttributes: new { @class = "glyphicon glyphicon-pencil" })
+                        </span>
+                        <span class="btn btn-info btn-sm">
+                            @Html.ActionLink("Delete", "Deletedata", new { id = item.userId }, htmlAttributes: new { @class = "glyphicon glyphicon-trash" })
+
+                        </span>
+
+                    </td>
+                </tr>
+        }
+
+            </table>
+        </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ChurchDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_Reg">
+    <Key>
+      <PropertyRef Name="FamilyNo" />
+    </Key>
+    <Property Name="FamilyNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WardName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="WardNumber" Type="int" Nullable="false" />
+    <Property Name="FamilyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FamilyHead" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="H_father_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="H_mother_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="H_wife_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="W_familyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="W_place" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="W_parish" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mob_nob" Type="int" />
+    <Property Name="Landline" Type="int" />
+    <Property Name="City" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="State" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Town" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Landmark" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prev_Parish" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prev_Dioceses" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Occupation" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MonthlyIncome" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Image" Type="varchar" MaxLength="500" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ChurchDbModelStoreContainer">
+    <EntitySet Name="tbl_Reg" EntityType="Self.tbl_Reg" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

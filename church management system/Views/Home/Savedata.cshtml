@@ -1,0 +1,168 @@
+﻿@model church_management_system.Models.login_regtbl
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>St. Joseph's Church.com</title>
+    <!-- meta-tags -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Soft Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //meta-tags -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/jquery")
+    @Scripts.Render("~/bundles/js")
+   
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header-top">
+        <div class="container">
+            <div class="bottom_header_left">
+                <p>
+                    Social media
+                </p>
+            </div>
+            <div class="bottom_header_right">
+                <div class="bottom-social-icons">
+                    <a class="facebook" href="#">
+                        <span class="fa fa-facebook"></span>
+                    </a>
+                    <a class="twitter" href="#">
+                        <span class="fa fa-twitter"></span>
+                    </a>
+                    <a class="pinterest" href="#">
+                        <span class="fa fa-pinterest-p"></span>
+                    </a>
+                    <a class="linkedin" href="#">
+                        <span class="fa fa-linkedin"></span>
+                    </a>
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="content white">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <h1>
+                                St. Joseph's Church
+                                <label>Parappa , Alakode , Kannur , 670571.</label>
+
+                            </h1>
+                        </a>
+                    </div>
+                    <!--/.navbar-header-->
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <nav class="link-effect-2" id="link-effect-2">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    @Html.ActionLink("Home", "Index", "Home")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("About Us", "About", "Home")
+
+                                </li>
+
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--/.navbar-collapse-->
+                    <!--/.navbar-->
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+        
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+
+            <div class="title-div" style="margin-top:20px">
+                <h3 class="tittle">
+                    <span>R</span>egistration
+                    <span>F</span>orm
+                </h3>
+                <div class="tittle-style">
+
+                </div>
+            </div>
+
+            <div class="container" style="width:40%;border:groove;margin-top:30px">
+                <div class="modal-body">
+                    <form id="regis">
+                        <div class="form-group">
+                            <p>User Name </p>
+                            @Html.EditorFor(m => m.username, new { @id = "username" })
+                            @Html.ValidationMessageFor(m => m.username, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="form-group">
+                            <p>Password</p>
+                            @Html.PasswordFor(m => m.password, new { @id = "pwd" })
+                            @Html.ValidationMessageFor(m => m.password, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="form-group">
+                            <p>Confirm Password</p>
+                            @Html.PasswordFor(m => m.confirmpwd, new { @id = "conpwd" })
+                            @Html.ValidationMessageFor(m => m.confirmpwd, "", new { @class = "text-danger" })
+
+                        </div>
+                    </form>
+                    <div class="form-group">
+                        <button class="btn btn-info form-control" type="submit"><i class="glyphicon glyphicon-registration-mark"></i>Submit</button>
+                    </div>
+                    <div class="form-group">
+                        <label class="label-success">@ViewBag.message</label>
+                        @Html.ActionLink("Login", "Login")
+                        <label class="label-success">@ViewBag.duplicate</label>  
+                    </div>
+                </div>
+
+            </div>
+        }
+
+        <div>
+           
+        </div>
+    </body>
+</html>

@@ -1,0 +1,224 @@
+﻿@model church_management_system.Models.tbl_Reg
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MemberDetails</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/jquery")
+    @Scripts.Render("~/bundles/js")
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <p style="margin-top:20px;margin-left:10px">
+            <a href="@Url.Action("Index", "Admin")" class="btn btn-info" role="button" style="background-color:crimson">HOME</a>
+</p>
+            <h4>user detail</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.WardName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.WardName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.WardNumber)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.WardNumber)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.FamilyName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.FamilyName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.FamilyHead)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.FamilyHead)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.H_father_name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.H_father_name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.H_mother_name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.H_mother_name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.H_wife_name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.H_wife_name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.W_familyName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.W_familyName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.W_place)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.W_place)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.W_parish)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.W_parish)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Mob_nob)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Mob_nob)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Landline)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Landline)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.City)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.City)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.State)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.State)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Town)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Town)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PO)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PO)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Landmark)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Landmark)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Prev_Parish)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Prev_Parish)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Prev_Dioceses)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Prev_Dioceses)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.email)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Occupation)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Occupation)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MonthlyIncome)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MonthlyIncome)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Image)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Image)
+                </dd>
+                <dd>
+                    <img src="@Url.Content(Model.Image)" width="200" height="200" />
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Time)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Time)
+                </dd>
+
+            </dl>
+    </div>
+   
+</body>
+</html>

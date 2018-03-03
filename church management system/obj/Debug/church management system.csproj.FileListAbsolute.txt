@@ -1,0 +1,52 @@
+D:\church management system\church management system\bin\ApplicationInsights.config
+D:\church management system\church management system\bin\church management system.dll.config
+D:\church management system\church management system\bin\church management system.dll
+D:\church management system\church management system\bin\church management system.pdb
+D:\church management system\church management system\bin\Antlr3.Runtime.dll
+D:\church management system\church management system\bin\EntityFramework.dll
+D:\church management system\church management system\bin\EntityFramework.SqlServer.dll
+D:\church management system\church management system\bin\Microsoft.AI.Agent.Intercept.dll
+D:\church management system\church management system\bin\Microsoft.AI.DependencyCollector.dll
+D:\church management system\church management system\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\church management system\church management system\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\church management system\church management system\bin\Microsoft.AI.Web.dll
+D:\church management system\church management system\bin\Microsoft.AI.WindowsServer.dll
+D:\church management system\church management system\bin\Microsoft.ApplicationInsights.dll
+D:\church management system\church management system\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\church management system\church management system\bin\Microsoft.Web.Infrastructure.dll
+D:\church management system\church management system\bin\Newtonsoft.Json.dll
+D:\church management system\church management system\bin\System.Net.Http.Formatting.dll
+D:\church management system\church management system\bin\System.Web.Helpers.dll
+D:\church management system\church management system\bin\System.Web.Http.dll
+D:\church management system\church management system\bin\System.Web.Http.WebHost.dll
+D:\church management system\church management system\bin\System.Web.Mvc.dll
+D:\church management system\church management system\bin\System.Web.Optimization.dll
+D:\church management system\church management system\bin\System.Web.Razor.dll
+D:\church management system\church management system\bin\System.Web.WebPages.Deployment.dll
+D:\church management system\church management system\bin\System.Web.WebPages.dll
+D:\church management system\church management system\bin\System.Web.WebPages.Razor.dll
+D:\church management system\church management system\bin\WebGrease.dll
+D:\church management system\church management system\bin\EntityFramework.xml
+D:\church management system\church management system\bin\EntityFramework.SqlServer.xml
+D:\church management system\church management system\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\church management system\church management system\bin\System.Web.Helpers.xml
+D:\church management system\church management system\bin\System.Web.Mvc.xml
+D:\church management system\church management system\bin\System.Web.Optimization.xml
+D:\church management system\church management system\bin\System.Web.Razor.xml
+D:\church management system\church management system\bin\System.Web.WebPages.xml
+D:\church management system\church management system\bin\System.Web.WebPages.Deployment.xml
+D:\church management system\church management system\bin\System.Web.WebPages.Razor.xml
+D:\church management system\church management system\bin\Antlr3.Runtime.pdb
+D:\church management system\church management system\bin\Newtonsoft.Json.xml
+D:\church management system\church management system\bin\System.Net.Http.Formatting.xml
+D:\church management system\church management system\bin\System.Web.Http.xml
+D:\church management system\church management system\bin\System.Web.Http.WebHost.xml
+D:\church management system\church management system\bin\Microsoft.ApplicationInsights.xml
+D:\church management system\church management system\bin\Microsoft.AI.DependencyCollector.xml
+D:\church management system\church management system\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\church management system\church management system\bin\Microsoft.AI.WindowsServer.xml
+D:\church management system\church management system\bin\Microsoft.AI.Web.xml
+D:\church management system\church management system\obj\Debug\church management system.csproj.CoreCompileInputs.cache
+D:\church management system\church management system\obj\Debug\church management system.dll
+D:\church management system\church management system\obj\Debug\church management system.pdb
+D:\church management system\church management system\obj\Debug\church management system.csprojResolveAssemblyReference.cache

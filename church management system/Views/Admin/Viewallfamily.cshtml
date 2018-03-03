@@ -1,0 +1,218 @@
+﻿@model IEnumerable<church_management_system.Models.tbl_Reg>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Viewallfamily</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/jquery")
+    @Scripts.Render("~/bundles/js")
+     <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+   
+</head>
+<body>
+    <p style="margin-top:20px;margin-left:10px">
+        <a href="@Url.Action("Index", "Admin")" class="btn btn-info" role="button" style="background-color:crimson">HOME</a>
+
+        <a href="@Url.Action("AddNewFamily", "Admin")" class="btn btn-info" role="button">Add New Family</a>
+        @*@Html.ActionLink("Add New Family", "Addnewfamily")*@
+    </p>
+
+    <div class="table-responsive" style="margin-top:50px;margin-left:10px">
+        <table class="table table-bordered table-hover table sm">
+            
+            <tr style="background-color:gray">
+                <th style="color:white">
+                    @Html.DisplayNameFor(model => model.FamilyNo)
+                </th>
+                <th style="color:white">
+                    @Html.DisplayNameFor(model => model.WardName)
+                </th>
+                <th style="color:white">
+                    @Html.DisplayNameFor(model => model.WardNumber)
+                </th>
+                <th style="color:white">
+                    @Html.DisplayNameFor(model => model.FamilyName)
+                </th>
+                <th style="color:white">
+                    @Html.DisplayNameFor(model => model.FamilyHead)
+                </th>
+                @*<th style="color:white">
+            @Html.DisplayNameFor(model => model.H_father_name)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.H_mother_name)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.H_wife_name)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.W_familyName)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.W_place)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.W_parish)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.Mob_nob)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.Landline)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.Town)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.PO)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.Landmark)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.Prev_Parish)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.Prev_Dioceses)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.Occupation)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.MonthlyIncome)
+        </th>
+                <th style="color:white">
+                    @Html.DisplayNameFor(model => model.Image)
+                </th>
+                @*<th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>*@
+                <th colspan="4" style="color:white">
+                    @Html.Label("Options")
+                </th>
+
+            </tr>
+           
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FamilyNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WardName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WardNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FamilyName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FamilyHead)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.H_father_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.H_mother_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.H_wife_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.W_familyName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.W_place)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.W_parish)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Mob_nob)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Landline)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.City)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.State)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Town)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Landmark)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Prev_Parish)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Prev_Dioceses)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Occupation)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MonthlyIncome)
+                    </td>*@
+                    @*<td>
+
+                        @Html.DisplayFor(modelItem => item.Image)
+                        <img src="@Url.Content(item.Image)" width="200" height="200" />
+                    </td>*@
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.Time)
+                        </td>*@
+                   
+                    <td>
+                        <span class="btn btn-info btn-sm">
+                            @Html.ActionLink("Edit", "Editdetail", new { id = item.FamilyNo }, htmlAttributes: new { @class = "glyphicon glyphicon-pencil" }) 
+                        </span>
+                       
+                        </td>
+                    <td>
+                        
+                        <span class="btn btn-info btn-sm"> @Html.ActionLink("Delete","Deletedata", new { id = item.FamilyNo }, htmlAttributes: new { @class = "glyphicon glyphicon-trash" })</span>
+                       </td>
+                    <td>
+                        <span class="btn btn-info btn-sm"> @Html.ActionLink("Details", "MemberDetails", new { id = item.FamilyNo }, htmlAttributes: new { @class = "glyphicon glyphicon-plus" })</span>
+
+                    </td>
+                    <td>
+                        <a href="#" class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-download-alt"></span>download
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+        </div>
+</body>
+</html>

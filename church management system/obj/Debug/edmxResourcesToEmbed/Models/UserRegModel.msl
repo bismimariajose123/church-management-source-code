@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ChurchDbModelStoreContainer" CdmEntityContainer="ChurchDbEntities">
+    <EntitySetMapping Name="tbl_Reg">
+      <EntityTypeMapping TypeName="ChurchDbModel.tbl_Reg">
+        <MappingFragment StoreEntitySet="tbl_Reg">
+          <ScalarProperty Name="FamilyNo" ColumnName="FamilyNo" />
+          <ScalarProperty Name="WardName" ColumnName="WardName" />
+          <ScalarProperty Name="WardNumber" ColumnName="WardNumber" />
+          <ScalarProperty Name="FamilyName" ColumnName="FamilyName" />
+          <ScalarProperty Name="FamilyHead" ColumnName="FamilyHead" />
+          <ScalarProperty Name="H_father_name" ColumnName="H_father_name" />
+          <ScalarProperty Name="H_mother_name" ColumnName="H_mother_name" />
+          <ScalarProperty Name="H_wife_name" ColumnName="H_wife_name" />
+          <ScalarProperty Name="W_familyName" ColumnName="W_familyName" />
+          <ScalarProperty Name="W_place" ColumnName="W_place" />
+          <ScalarProperty Name="W_parish" ColumnName="W_parish" />
+          <ScalarProperty Name="Mob_nob" ColumnName="Mob_nob" />
+          <ScalarProperty Name="Landline" ColumnName="Landline" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Town" ColumnName="Town" />
+          <ScalarProperty Name="PO" ColumnName="PO" />
+          <ScalarProperty Name="Landmark" ColumnName="Landmark" />
+          <ScalarProperty Name="Prev_Parish" ColumnName="Prev_Parish" />
+          <ScalarProperty Name="Prev_Dioceses" ColumnName="Prev_Dioceses" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="MonthlyIncome" ColumnName="MonthlyIncome" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
